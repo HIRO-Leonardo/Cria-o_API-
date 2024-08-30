@@ -31,11 +31,7 @@ personagens = [
 
 @app.get("/")
 async def home():
-    return 'BEM VINDO'
-
-@app.get("/personagem")
-async def personagem():
-    return {"Personagens": personagens}
+    return personagens
 
 @app.get("/personagem/{id}")
 async def pegar_Personagem(id: int):
